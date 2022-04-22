@@ -33,6 +33,8 @@ func main() {
 		fmt.Println("Please enter how many tickets you want to book?")
 		fmt.Scan(&userTickets)
 
+		// isValidName := len(firstName) >= 2 && len(lastName) >= 2
+
 		if userTickets <= remainingTickets {
 
 			remainingTickets = remainingTickets - userTickets

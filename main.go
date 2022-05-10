@@ -11,9 +11,7 @@ func main() {
 	var remainingTickets uint = 50
 	bookings := []string{}
 
-	fmt.Printf("Welcome to %v booking application\n", conferenceName)
-	fmt.Printf("We have total %v tickets and available %v \n", conferenceTickets, remainingTickets)
-	fmt.Println("Get your tickets here to attend")
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
 
 	for {
 		var firstName string
@@ -54,7 +52,6 @@ func main() {
 
 			for _, booking := range bookings {
 				var names = strings.Fields(booking)
-
 				firstNames = append(firstNames, names[0])
 			}
 
@@ -76,5 +73,10 @@ func main() {
 		}
 
 	}
+}
 
+func greetUsers(confName string, conferenceTickets int, remainingTickets uint) {
+	fmt.Printf("Welcome to %v booking application\n", confName)
+	fmt.Printf("We have total %v tickets and available %v \n", conferenceTickets, remainingTickets)
+	fmt.Println("Get your tickets here to attend")
 }
